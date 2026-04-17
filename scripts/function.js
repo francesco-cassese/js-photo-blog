@@ -58,13 +58,13 @@ const creaCard = datiCard => {
  */
 
 const stampaCard = arrayFoto => {
-    const contenutoHtml = arrayFoto.map(fotoSingola => {
-        return creaCard(fotoSingola);
+    const contenutoHtml = arrayFoto.map(fotoSingola => {            //trasformo l'array di oggetti in un array di stringhe
+        return creaCard(fotoSingola);                               //aggiungendo per ogni oggetto il pezzo di codice della card
     });
-    const stringaFinale = contenutoHtml.join('');
+    const stringaFinale = contenutoHtml.join('');                   //trasformo tutto in un unica grande stringa
 
-    if (galleryHtml !== null) {
-        galleryHtml.innerHTML = stringaFinale;
+    if (galleryHtml !== null) {                                     //controllo per typescript
+        galleryHtml.innerHTML = stringaFinale;                      //se lo trova ignetta
     }
 }
 
@@ -74,12 +74,8 @@ const stampaCard = arrayFoto => {
 
 const stampaListaCompleta = () => {
 
-    if (galleryHtml !== null) {
-        galleryHtml.innerHTML = "";
-    }
-
-    chiamataApi().then(card => {
-        stampaCard(card);
+    chiamataApi().then(arrayDatiApy => {
+        stampaCard(arrayDatiApy);
     })
 
 }
