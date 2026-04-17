@@ -27,8 +27,25 @@ h1 {
 ==================================
 */
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .header-container {
     background-image: url('../img/wall.png');
     padding: 20px;
     text-align: center;
+}
+
+/*
+==================================
+    MAIN
+==================================
+*/
+
+.wrapper {
+    background-image: url('../img/cork.png');
+    flex: 1;
 }
