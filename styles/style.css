@@ -16,9 +16,13 @@
 ==================================
 */
 
-h1 {
-    font-family: "Edu TAS Beginner", sans-serif;
+.title {
     font-size: 3rem;
+}
+
+h1,
+h3 {
+    font-family: "Edu TAS Beginner", sans-serif;
 }
 
 /*
@@ -85,6 +89,10 @@ body {
     display: block;
     object-fit: cover;
     width: 260px;
+}
+
+.date-card {
+    font-family: "Sometype Mono", "monospace";
 }
 
 .container-description {
