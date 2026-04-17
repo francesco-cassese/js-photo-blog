@@ -69,6 +69,7 @@ body {
 .card {
     background-color: white;
     padding: 15px;
+    margin-bottom: 10px;
     flex-basis: calc((100% / 3) - (20 * 2) / 3);
     flex-shrink: 1;
     position: relative;
@@ -78,10 +79,10 @@ body {
 
 .card-pin {
     position: absolute;
-    width: 25px;
+    width: 30px;
     right: 50%;
     top: 0;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -35%);
 }
 
 .container-img {
