@@ -67,3 +67,19 @@ const stampaCard = arrayFoto => {
         galleryHtml.innerHTML = stringaFinale;
     }
 }
+
+// ===================================
+//  FUNZIONE GENERA LISTA 
+// ===================================
+
+const stampaListaCompleta = () => {
+
+    if (galleryHtml !== null) {
+        galleryHtml.innerHTML = "";
+    }
+
+    chiamataApi().then(card => {
+        stampaCard(card);
+    })
+
+}
