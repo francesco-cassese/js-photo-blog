@@ -9,3 +9,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*
+==================================
+    ROOT & VARIABILI
+==================================
+*/
+
+h1 {
+    font-family: "Edu TAS Beginner", sans-serif;
+    font-size: 3rem;
+}
+
+/*
+==================================
+    HEADER
+==================================
+*/
+
+.header-container {
+    background-image: url('../img/wall.png');
+    padding: 20px;
+    text-align: center;
+}
