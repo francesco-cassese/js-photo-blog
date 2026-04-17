@@ -76,10 +76,15 @@ body {
 }
 
 .container-img {
-    width: 100%;
+    width: 300px;
     aspect-ratio: 1;
-    background-color: blue;
     margin: 0 auto;
+}
+
+.img-card {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
 .container-description {

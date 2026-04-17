@@ -38,7 +38,7 @@ const creaCard = datiCard => {
       <article class="card">
                 <img src="./img/pin.svg" alt="l'immagine di un chiodino per foto" class="card-pin">
                 <div class="container-img">
-                    <img src="${datiCard.url}" alt="foto di ${datiCard.title}">
+                    <img src="${datiCard.url}" alt="foto di ${datiCard.title}" class = "img-card">
                 </div>
                 <div class="container-description">
                     <h3>${datiCard.title}</h3>
