@@ -40,9 +40,9 @@ const creaCard = datiCard => {
                 <div class="container-img">
                     <img src="${datiCard.url}" alt="foto di ${datiCard.title}" class = "img-card">
                 </div>
-                <div class="container-description">
-                    <h3>${datiCard.title}</h3>
+                <div class="container-description">                    
                     <time datetime="${datiCard.date}" class="date-card">${datiCard.date}</time>
+                    <h3>${datiCard.title}</h3>
                 </div>
             </article>`;
 
