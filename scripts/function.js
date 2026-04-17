@@ -74,8 +74,7 @@ const stampaCard = arrayFoto => {
 
 const stampaListaCompleta = () => {
 
-    chiamataApi().then(arrayDatiApy => {
-        stampaCard(arrayDatiApy);
+    chiamataApi().then(arrayDatiApy => {                           // Chiamo la funzione che mi fa la richiesta al server
+        stampaCard(arrayDatiApy);                                  //appena risponde stampo le card tramite la funzione 
     })
-
 }
