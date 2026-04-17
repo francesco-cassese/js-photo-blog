@@ -62,7 +62,7 @@ body {
 .card {
     background-color: white;
     padding: 10px;
-    flex-basis: 300px;
+    flex-basis: calc((100% / 3) - (20 * 2) / 3);
     flex-shrink: 1;
     position: relative;
 }
@@ -71,24 +71,20 @@ body {
     position: absolute;
     width: 25px;
     right: 50%;
-    top: 5px;
+    top: 0;
     transform: translate(50%, -50%);
 }
 
 .container-img {
-    width: 300px;
-    aspect-ratio: 1;
-    margin: 0 auto;
+    max-width: 400px;
 }
 
 .img-card {
     display: block;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
 .container-description {
     padding: 10px;
-    max-width: 70%;
-    margin: 0 auto;
 }
