@@ -21,3 +21,34 @@ const chiamataApi = () => {
             console.error(errore);                                 //momentaneamente lo stampo in console
         })
 }
+
+/*
+================================================================
+    FUNZIONE CREA CARD
+================================================================
+*/
+
+/** 
+ * @param {Object} datiCard
+ * @param {number} datiCard.id 
+ * @param {string} datiCard.title
+ * @param {string} datiCard.date
+ * @param {string} datiCard.url
+ */
+
+const creaCard = (datiCard) => {
+
+    const cardVacanza = `
+      <article class="card">
+                <img src="./img/pin.svg" alt="l'immagine di un chiodino per foto" class="card-pin">
+                <div class="container-img">
+                    <img src="${datiCard.url}" alt="foto di ${datiCard.title}">
+                </div>
+                <div class="container-description">
+                    <h3>${datiCard.title}</h3>
+                    <time datetime="${datiCard.date}">${datiCard.date}</time>
+                </div>
+            </article>`;
+
+    return cardVacanza;
+}
