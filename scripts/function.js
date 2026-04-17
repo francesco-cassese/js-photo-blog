@@ -42,7 +42,7 @@ const creaCard = datiCard => {
                 </div>
                 <div class="container-description">
                     <h3>${datiCard.title}</h3>
-                    <time datetime="${datiCard.date}">${datiCard.date}</time>
+                    <time datetime="${datiCard.date}" class="date-card">${datiCard.date}</time>
                 </div>
             </article>`;
 
