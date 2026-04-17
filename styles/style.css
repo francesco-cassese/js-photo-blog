@@ -23,6 +23,7 @@
 h1,
 h3 {
     font-family: "Edu TAS Beginner", sans-serif;
+    font-size: 1.7rem;
 }
 
 /*
@@ -93,8 +94,10 @@ body {
 
 .date-card {
     font-family: "Sometype Mono", "monospace";
+    color: gray;
+    font-size: 0.9rem;
 }
 
 .container-description {
-    padding: 10px;
+    padding-top: 10px;
 }
