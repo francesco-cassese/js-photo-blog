@@ -28,15 +28,11 @@ const chiamataApi = () => {
 ================================================================
 */
 
-/** 
- * @param {Object} datiCard
- * @param {number} datiCard.id 
- * @param {string} datiCard.title
- * @param {string} datiCard.date
- * @param {string} datiCard.url
+/**
+ * @param {{id: number, title: string, date: string, url: string}} datiCard
  */
 
-const creaCard = (datiCard) => {
+const creaCard = datiCard => {
 
     const cardVacanza = `
       <article class="card">
@@ -51,4 +47,23 @@ const creaCard = (datiCard) => {
             </article>`;
 
     return cardVacanza;
+}
+
+// ===================================
+//  FUNZIONE STAMPA CARD 
+// ===================================
+
+/**
+ * @param {{id: number, title: string, date: string, url: string}[]} arrayFoto arrayFoto
+ */
+
+const stampaCard = arrayFoto => {
+    const contenutoHtml = arrayFoto.map(fotoSingola => {
+        return creaCard(fotoSingola);
+    });
+    const stringaFinale = contenutoHtml.join('');
+
+    if (galleryHtml !== null) {
+        galleryHtml.innerHTML = stringaFinale;
+    }
 }
