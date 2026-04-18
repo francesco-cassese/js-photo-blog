@@ -54,7 +54,7 @@ const creaCard = datiCard => {
 // ===================================
 
 /**
- * @param {{id: number, title: string, date: string, url: string}[]} arrayFoto arrayFoto
+ * @param {{id: number, title: string, date: string, url: string}[]} arrayFoto 
  */
 
 const stampaCard = arrayFoto => {
