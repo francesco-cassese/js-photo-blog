@@ -135,4 +135,30 @@ const controllaEStampaFile = (inputDaControllare) => {
     }
 
     return -1;                                           // Se la lista è vuota, restituisco -1 per segnalare che il controllo è fallito
-}; 
+};
+
+/* ===========================================================
+    FUNZIONE AGGIUNTA IMMAGINE
+===========================================================
+*/
+/**
+ * 
+ * @param {File} fileDaStampare 
+ * @param {HTMLElement} contenitoreTarget 
+ */
+const aggiungiImmagineAllaGalleria = (fileDaStampare, contenitoreTarget) => {
+
+    const urlTemporaneo = URL.createObjectURL(fileDaStampare);                   // Creo un indirizzo temporaneo che punta al file nel mio computer
+
+    // Preparo i dati nello stesso formato che usa l'API per non rompere creaCard
+    const nuoviDati = {
+        id: Date.now(),                                                          // Uso il timestamp attuale come ID unico
+        title: fileDaStampare.name,                                              // Uso il nome del file come titolo
+        date: "Oggi",                                                            // Imposto una data fissa o attuale
+        url: urlTemporaneo                                                       // Passo l'indirizzo temporaneo appena creato
+    };
+
+    const nuovaCardHtml = creaCard(nuoviDati);                                   // Genero l'HTML della singola card usando la tua funzione esistente
+
+    contenitoreTarget.innerHTML += nuovaCardHtml;                                // Prendo il contenuto attuale e attacco la nuova card alla fine
+};

@@ -28,10 +28,14 @@ bottoneCloseOverlay?.addEventListener('click', nascondiOverlay);   //Gestisco la
 
 moduloInvio?.addEventListener('change', event => {
     event.preventDefault();                                        // Impedisco al browser di ricaricare la pagina o fare azioni di default
-    if (selettoreFile instanceof HTMLInputElement) {               // Controllo se l'elemento esiste E se è un elemento input HTMLInputElement
+    if (selettoreFile instanceof HTMLInputElement && galleryHtml instanceof HTMLElement) {               // Controllo se l'elemento esiste E se è un elemento input HTMLInputElement
         const risultato = controllaEStampaFile(selettoreFile);     // Lancio il controllo sulla validità del file selezionato
 
-        if (risultato === -1) {                                    // Se la funzione mi restituisce -1, significa che non c'è alcun file
+        if (risultato instanceof File) {                           // Se il risultato è un file
+
+            aggiungiImmagineAllaGalleria(risultato, galleryHtml);  // ...chiamo la funzione per stampare la nuova foto a schermo!
+
+        } else if (risultato === -1) {                             // Se la funzione mi restituisce -1, significa che non c'è alcun file
             alert("Attenzione: seleziona un'immagine!");           // Avviso l'utente che deve ancora scegliere una foto
         }
     }
