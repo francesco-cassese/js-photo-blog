@@ -33,6 +33,10 @@ h3 {
     text-transform: uppercase;
 }
 
+.d-none {
+    display: none;
+}
+
 /*
 ==================================
     HEADER
