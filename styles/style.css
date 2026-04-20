@@ -36,10 +36,6 @@ h3 {
     text-transform: uppercase;
 }
 
-.img-overlay-container.d-none {
-    display: none;
-}
-
 .over-flow-hidden {
     overflow: hidden;
 }
@@ -98,7 +94,17 @@ body {
     position: relative;
     box-shadow: 0 4px 10px var(--shadow-card-color);
     font-weight: bold;
+    cursor: pointer;
 }
+
+.card:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 0 10px 20px var(--shadow-card-color);
+    z-index: 10;
+    transition: transform 0.4s ease;
+}
+
+
 
 .card-pin {
     position: absolute;
@@ -106,6 +112,11 @@ body {
     right: 50%;
     top: 0;
     transform: translate(50%, -35%);
+    transition: all 0.4s ease;
+}
+
+.card:hover .card-pin {
+    opacity: 0;
 }
 
 .container-img {
@@ -146,6 +157,14 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.50);
     z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.img-overlay-container.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .img-overlay {
