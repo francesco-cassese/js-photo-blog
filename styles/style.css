@@ -22,7 +22,7 @@
     --color-card-date: #b1b1b2;
     --bg-color-btn-close: #f4f4f4;
     --color-shadow-btn-close: rgba(0, 0, 0, 0.3);
-    --bg-color-btn-close-HV: #eee;
+    --bg-color-btn-close-HV: #eee
 }
 
 .title {
@@ -159,10 +159,10 @@ body {
     font-weight: bold;
     background-color: var(--bg-color-btn-close);
     box-shadow: 0 4px 15px var(--color-shadow-btn-close);
-    transition: transform 0.2 ease;
+    transition: transform 0.2s ease;
 }
 
 .btn-close-overlay:hover {
     transform: scale(1.1);
-
+    filter: brightness(1.2);
 }
