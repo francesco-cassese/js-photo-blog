@@ -102,9 +102,9 @@ const gestisciAperturaOverlay = (evento, contenitore, immagineGrande) => {
 
     // Controllo che l'immagine della card e quella dell'overlay siano dei tag <img> validi
     if (fotoCard instanceof HTMLImageElement && immagineGrande instanceof HTMLImageElement) {
-        immagineGrande.src = fotoCard.src;                                                      // Copio l'indirizzo della foto piccola e lo "incollo" in quella grandeà
+        immagineGrande.src = fotoCard.src;                                                      // Copio l'indirizzo della foto piccola e lo "incollo" in quella grande
 
-        contenitore?.classList.remove('d-none');                                             // Tolgo la classe che nascondeva tutto così l'overlay appare
+        contenitore?.classList.add('active');                                             // Tolgo la classe che nascondeva tutto così l'overlay appare
         document.body.classList.add('over-flow-hidden');                                    // Aggiungo al body la classe per bloccare lo scroll della pagina
     }
 }
@@ -119,7 +119,7 @@ const gestisciAperturaOverlay = (evento, contenitore, immagineGrande) => {
  */
 
 //Una volta che ho cliccato sul bottone aggiongo variabile display none e rimuovo quella dell'overflow hidden
-const nascondiOverlay = (contenitore) => {
-    contenitore?.classList.add('d-none');
+const nascondiOverlay = contenitore => {
+    contenitore?.classList.remove('active');
     document.body.classList.remove('over-flow-hidden');
 };
