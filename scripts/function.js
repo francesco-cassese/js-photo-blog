@@ -116,3 +116,23 @@ const nascondiOverlay = () => {
     containerOverlay?.classList.remove('active');
     document.body.classList.remove('over-flow-hidden');
 };
+
+// ===================================
+//  GESTIONE Controlla E STAMPA FILE
+// ===================================
+
+/**
+ * 
+ @param {HTMLInputElement} inputDaControllare
+ */
+
+const controllaEStampaFile = (inputDaControllare) => {
+    const listaFile = inputDaControllare.files;          // Accedo alla proprietà .files dell'input per vedere cosa ha scelto l'utente
+
+    if (listaFile && listaFile.length > 0) {             // Controllo se la lista esiste e se contiene effettivamente almeno un file
+        const fileSingolo = listaFile[0];;               // Estraggo il primo file della lista
+        return fileSingolo;                              // Restituisco l'oggetto file completo così posso usarlo altrove
+    }
+
+    return -1;                                           // Se la lista è vuota, restituisco -1 per segnalare che il controllo è fallito
+}; 
