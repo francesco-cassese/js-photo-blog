@@ -188,3 +188,41 @@ body {
     transform: scale(1.1);
     filter: brightness(1.2);
 }
+
+/*
+==================================
+    FOOTER
+==================================
+*/
+.container-footer {
+    background-image: url('../img/wall.png');
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#btn-form {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-form:hover {
+    background-color: #0056b3;
+}
