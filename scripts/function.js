@@ -150,10 +150,12 @@ const aggiungiImmagineAllaGalleria = (fileDaStampare, contenitoreTarget) => {
 
     const urlTemporaneo = URL.createObjectURL(fileDaStampare);                   // Creo un indirizzo temporaneo che punta al file nel mio computer
 
+    const nomePulito = fileDaStampare.name.split('.').shift();                   //// Divido il nome del file in pezzi ogni volta che trovo un punto e prendo solo il primo pezzo
+
     // Preparo i dati nello stesso formato che usa l'API per non rompere creaCard
     const nuoviDati = {
         id: Date.now(),                                                          // Uso il timestamp attuale come ID unico
-        title: fileDaStampare.name,                                              // Uso il nome del file come titolo
+        title: nomePulito,                                                       // Uso il nome del file come titolo
         date: "Oggi",                                                            // Imposto una data fissa o attuale
         url: urlTemporaneo                                                       // Passo l'indirizzo temporaneo appena creato
     };
