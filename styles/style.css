@@ -93,7 +93,6 @@ body {
     flex-basis: calc((100% / 3) - (20px * 2) / 3);
     flex-grow: 0;
     flex-shrink: 0;
-    max-width: 100%;
     min-width: 280px;
     position: relative;
     box-shadow: 0 4px 10px var(--shadow-card-color);
