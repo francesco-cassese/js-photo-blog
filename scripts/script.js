@@ -28,7 +28,7 @@ bottoneCloseOverlay?.addEventListener('click', nascondiOverlay);   //Gestisco la
 
 moduloInvio?.addEventListener('change', event => {
     event.preventDefault();                                        // Impedisco al browser di ricaricare la pagina o fare azioni di default
-    if (selettoreFile) {                                           // Verifico che il campo di input esista prima di procedere
+    if (selettoreFile instanceof HTMLInputElement) {               // Controllo se l'elemento esiste E se è un elemento input HTMLInputElement
         const risultato = controllaEStampaFile(selettoreFile);     // Lancio il controllo sulla validità del file selezionato
 
         if (risultato === -1) {                                    // Se la funzione mi restituisce -1, significa che non c'è alcun file
