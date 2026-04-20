@@ -152,6 +152,7 @@ const aggiungiImmagineAllaGalleria = (fileDaStampare, contenitoreTarget) => {
 
     // Preparo i dati nello stesso formato che usa l'API per non rompere creaCard
     const nuoviDati = {
+        id: Date.now(),                                                          // Uso il timestamp attuale come ID unico
         title: fileDaStampare.name,                                              // Uso il nome del file come titolo
         date: "Oggi",                                                            // Imposto una data fissa o attuale
         url: urlTemporaneo                                                       // Passo l'indirizzo temporaneo appena creato
