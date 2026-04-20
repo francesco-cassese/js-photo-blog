@@ -144,6 +144,12 @@ body {
     padding-top: 10px;
 }
 
+.container-description h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*
 ==================================
     OVERLAY
