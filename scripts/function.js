@@ -78,3 +78,48 @@ const stampaListaCompleta = () => {
         stampaCard(arrayDatiApy);                                  //appena risponde stampo le card tramite la funzione 
     })
 }
+
+// ===================================
+//  GESTIONE APERTURA OVERLAY
+// ===================================
+
+
+/**
+ * 
+ * @param {Event} evento 
+ * @param {Element} contenitore 
+ * @param {Element} immagineGrande
+ */
+
+const gestisciAperturaOverlay = (evento, contenitore, immagineGrande) => {
+    const target = evento.target;                                                           // Prendo l'elemento preciso dove ho cliccato
+    if (!(target instanceof Element)) return                                                // Se per caso non è un pezzo di HTML vero, fermo tutto qui
+
+    const card = target.closest('.card');                                                   // Risalgo dal punto del click finché non trovo la card intera
+    if (!card) return                                                                       // Se ho cliccato fuori dalle card, non devo fare nulla, quindi esco
+
+    const fotoCard = card.querySelector('.img-card');                                       // Vado a pescare l'immagine piccola dentro la card cliccata
+
+    // Controllo che l'immagine della card e quella dell'overlay siano dei tag <img> validi
+    if (fotoCard instanceof HTMLImageElement && immagineGrande instanceof HTMLImageElement) {
+        immagineGrande.src = fotoCard.src;                                                      // Copio l'indirizzo della foto piccola e lo "incollo" in quella grandeà
+
+        contenitore?.classList.remove('d-none');                                             // Tolgo la classe che nascondeva tutto così l'overlay appare
+        document.body.classList.add('over-flow-hidden');                                    // Aggiungo al body la classe per bloccare lo scroll della pagina
+    }
+}
+
+// ===================================
+//  GESTIONE CHIUSURA OVERLAY
+// ===================================
+
+/**
+ * 
+ * @param {Element} contenitore 
+ */
+
+//Una volta che ho cliccato sul bottone aggiongo variabile display none e rimuovo quella dell'overflow hidden
+const nascondiOverlay = (contenitore) => {
+    contenitore?.classList.add('d-none');
+    document.body.classList.remove('over-flow-hidden');
+};
