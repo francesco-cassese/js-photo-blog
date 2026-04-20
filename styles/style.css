@@ -36,7 +36,7 @@ h3 {
     text-transform: uppercase;
 }
 
-.d-none {
+.img-overlay-container.d-none {
     display: none;
 }
 
@@ -51,7 +51,7 @@ h3 {
 */
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -134,7 +134,7 @@ body {
 ==================================
 */
 
-#img-overlay-container {
+.img-overlay-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -146,7 +146,6 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.50);
     z-index: 100;
-    overflow-y: none;
 }
 
 .img-overlay {
