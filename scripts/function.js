@@ -150,7 +150,8 @@ const aggiungiImmagineAllaGalleria = (fileDaStampare, contenitoreTarget) => {
 
     const urlTemporaneo = URL.createObjectURL(fileDaStampare);                   // Creo un indirizzo temporaneo che punta al file nel mio computer
 
-    const nomePulito = fileDaStampare.name.split('.').shift() || fileDaStampare.name;  // Divido il nome del file in pezzi ogni volta che trovo un punto e prendo solo il primo pezzo
+    // Divido il nome del file in pezzi ogni volta che trovo un punto e prendo solo il primo pezzo o se la parte sinistra è undefined o null, usa il valore a destra
+    const nomePulito = fileDaStampare.name.split('.').shift() || fileDaStampare.name;
 
     // Preparo i dati nello stesso formato che usa l'API per non rompere creaCard
     const nuoviDati = {
