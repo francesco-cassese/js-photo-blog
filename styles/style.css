@@ -40,6 +40,10 @@ h3 {
     display: none;
 }
 
+.over-flow-hidden {
+    overflow: hidden;
+}
+
 /*
 ==================================
     HEADER
