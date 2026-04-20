@@ -24,7 +24,6 @@
     --color-shadow-btn-close: rgba(0, 0, 0, 0.3);
     --bg-btn-form: #f4f4f4;
     --color-shadow-btn-form: rgba(0, 0, 0, 0.3);
-    --card-size: clamp(280px, calc((100% / 3) - (20px * 2) / 3), 400px)
 }
 
 .title {
@@ -82,7 +81,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 50px;
+    padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -91,8 +90,11 @@ body {
     background-color: var(--bg-card);
     padding: 15px;
     margin-bottom: 10px;
-    flex: 0 0 var(--card-size);
-    min-width: 270px;
+    flex-basis: calc((100% / 3) - (20px * 2) / 3);
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    min-width: 280px;
     position: relative;
     box-shadow: 0 4px 10px var(--shadow-card-color);
     font-weight: bold;
@@ -207,6 +209,7 @@ body {
 form {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 20px;
     border-radius: 8px;
